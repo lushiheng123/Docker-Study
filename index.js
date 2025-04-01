@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 dotenv.config()
 
-const port  = process.env.BACKEND_PORT || 3001
+const port  = process.env.BACKEND_PORT || 4001
 
 app.listen(port, () => {
     
