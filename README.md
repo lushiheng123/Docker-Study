@@ -20,7 +20,7 @@ git push -u origin main
 
 ### 2. 不需要真正的安装 node_modules，而是用 docker 的方式封装
 
-### 3. 创建 Dockerfile 文件,用 docker bulid -t myapp . 指令部署(node 可能要预先 pull 一下)
+### 3. `docker build -t`创建 Dockerfile 文件,用 `docker bulid -t myapp .` 指令部署(node 可能要预先 pull 一下)
 
 ```cmd
 docker build -t myapp .
@@ -57,15 +57,15 @@ docker run --name myapp_1 -p 4000:4000 -d myapp
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/4d2a9af6-1b6a-4f1c-b81c-82c7c92e2f33)
 
-### docker ps 可以看到运行的容器
+### `docker ps` 可以看到运行的容器
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/8434be1a-6d1f-4ffd-9454-04d9fbf1dcf7)
 
-### 6. _docker stop_+名字或者 container id 可以中止容器运行
+### 6.`_docker stop_`+名字或者 container id 可以中止容器运行
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/8617f2ff-2d7a-4d54-b9c0-c74e8f87b440)
 
-### 7. docker run --name myapp_1(指定容器名字) -p 4000:4000（指定端口） -d myapp（通过 docker images 查看镜像） 命令行运行容器
+### 7. `docker run` --name myapp_1(指定容器名字) -p 4000:4000（指定端口） -d myapp（通过 docker images 查看镜像） 命令行运行容器
 
 ```cmd
 docker run --name myapp_1 -p 4000:4000 -d myapp
@@ -73,15 +73,15 @@ docker run --name myapp_1 -p 4000:4000 -d myapp
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/39d6ba23-d961-4c2c-bc4a-b282a2311602)
 
-### 8. 对于 docker ps -a 存在但未运行的 docker 容器，用 docker start 指令运行
+### 8. 对于 `docker ps -a` 存在但未运行的 docker 容器，用 `docker start` 指令运行
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/e24ded06-d4ea-4d6a-809b-824b6a82d82a)
 
-### 9. 对于 docker stop 暂停但是未删除的容器，利用 docker container rm +容器名称删除
+### 9. 对于 `docker stop` 暂停但是未删除的容器，利用 docker container rm +容器名称删除
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/148830b7-838d-4f41-9483-cace403cfb0b)
 
-### 10. docker image rm +名称删除镜像(不行就-f 强行删除)
+### 10. `docker image rm` +名称删除镜像(不行就-f 强行删除)
 
 ![image](https://github.com/lushiheng123/MarkDown/assets/80657580/87ff6e34-c23b-462e-857b-fdb9bf8c2dc8)
 
