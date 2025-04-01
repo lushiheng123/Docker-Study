@@ -13,7 +13,7 @@ app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 
 })
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
     
     res.send("你好")
 })
