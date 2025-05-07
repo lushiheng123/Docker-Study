@@ -73,3 +73,8 @@ docker exec -u root jenkins-blueocean bash -c "apt-get update && apt-get install
 # 选择最流行的执行 shell 和 e-mail 的提示
 
 ![alt text](README_Images/README/image-9.png)
+![alt text](README_Images/README/image-10.png)
+
+# 尝试导出`build_id和build_url`这种环境变量参数
+
+![alt text](README_Images/README/image-11.png)
