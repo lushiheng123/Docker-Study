@@ -1,0 +1,15 @@
+FROM redhat/ubi9:latest
+
+# 复制自定义repo文件
+COPY aliyun.repo /etc/yum.repos.d/aliyun.repo
+
+# 清理缓存，生成缓存
+RUN yum clean all && yum makecache
+
+# 安装常用工具包
+RUN yum install -y vim tcpdump 
+
+# 可选做更新
+
+
+CMD ["/bin/bash"]
