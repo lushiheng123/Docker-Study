@@ -27,3 +27,6 @@ spec:
 
 # 随后试图导入环境变量，主要是研究valueFrom中的cm(configmapref)里面的数据来源
 ## 但是我们当前的环境没有可用的CM，所以要创建一个，创建的办法可以通过 _[创建cm](./7-kubectl%20get%20cm指令.md/#通过apply的方式创建cm)_
+![alt text](README_Images/9-env环境变量/image-2.png)
+# 下一步在我们的yaml文件中引用这个cm
+![alt text](README_Images/9-env环境变量/image-3.png)

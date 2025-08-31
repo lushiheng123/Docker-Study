@@ -30,6 +30,7 @@ data:
 ![alt text](<README_Images/7-kubectl get cm指令/image-4.png>)
 
 # 通过指令的方式创建cm
+## `kubectl create cm trauerweide --from-literal tree=trauerweide`
 ```sh
 kubectl -f /root/cm.yaml  create
 ```

@@ -1,4 +1,16 @@
 
+# Kubernetes 学习笔记
+
+## 目录
+1. [Git仓库初始化与配置](#git-仓库初始化与配置)
+2. [Kubernetes Dashboard安装配置](#kubernetes-dashboard安装配置)
+   - [安装Dashboard](#按照官方dashboard文档安装环境)
+   - [配置ServiceAccount](#看kubectl--n-kubernetes-dashboard-get-serviceaccount有没有用户)
+   - [创建访问Token](#然后创建admin-user-tokenyaml应用后生成密钥)
+   - [访问Dashboard](#随后httpslocalhost8443输入token就能登录了)
+
+## Git仓库初始化与配置
+
 # git init
 # git add .
 # git commit -m "first commit"
@@ -6,6 +18,7 @@
 # git remote add origin git@github.com:lushiheng123/Docker-Study.git
 # git push -u origin k8s
 
+# kubectl run test-pod --image=curlimages/curl --rm -it -- sh创建测试node
 # [按照官方dashboard文档安装环境](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 ```sh
