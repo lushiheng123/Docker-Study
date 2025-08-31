@@ -1,3 +1,18 @@
+<h1 align="center">yaml文件中写pod的部署类型</h1>
+
+## 目录
+1. [replicaSet管理一组的pod](#1-replicaset管理一组的pod通常不直接用而是通过deployment去管理)
+   - [部署步骤](#部署步骤)
+   - [检查状态](#检查状态)
+   - [kubectl delete replicaset删除指令](#kubectl-delete-replicaset删除指令)
+2. [Service为一组 Pod 提供网络访问](#2-service为一组-pod-提供网络访问定义负载均衡或外部访问方式)
+   - [常见类型：ClusterIP、NodePort、LoadBalancer](#常见类型clusterip默认nodportloadbalancer)
+3. [deployment模式（常用）](#3deployment模式常用直接包含replicaset的功能)
+   - [检查deployment状态](#检查下kubectl-get-deployment)
+   - [实验部分](#实验部分建议先删除掉所有的pod资源再搞比较明显kubectl-delete-all---all)
+4. [statefulset](#4-statefulset)
+
+
 # 1. replicaSet管理一组的pod（通常不直接用，而是通过deployment去管理）
 ![alt text](README_Images/5-pod的不同类型/image-1.png)
 ## 这里一定要注意，selector.matchLabels指定app:nginx就是下面模板的labels.app:nginx
