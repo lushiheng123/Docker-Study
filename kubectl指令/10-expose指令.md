@@ -19,6 +19,8 @@ spec:
 ```
 
 # 3-用expose的指令为现有pod创建service
+## 其实指定后主要是看到service有了端口`kubectl get services`
+![alt text](README_Images/10-expose指令/image-8.png)
 ```sh
 kubectl expose pod backend-pod --name=backend-service --port=3000 --target-port=3000
 ```

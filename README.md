@@ -18,7 +18,7 @@
 # git remote add origin git@github.com:lushiheng123/Docker-Study.git
 # git push -u origin k8s
 
-# kubectl run test-pod --image=curlimages/curl --rm -it -- sh创建测试node
+# `kubectl run test-pod --image=curlimages/curl --rm -it -- sh`创建测试node
 # [按照官方dashboard文档安装环境](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 ```sh
