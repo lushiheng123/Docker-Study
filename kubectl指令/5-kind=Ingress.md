@@ -4,13 +4,24 @@
 
 # 1- 实验环境
 ![alt text](README_Images/5-kind=Ingress/image.png)
+## 先创建namespace为ingress-nginx
+![alt text](README_Images/5-kind=Ingress/image-14.png)
+## 随后部署ingree-nginx的controller
+```sh
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
+```
+![alt text](README_Images/5-kind=Ingress/image-15.png)
 
+## 随后在default上部署咱的nginx服务
 ## deploymnet.yaml
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -34,12 +45,15 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-server
+  namespace: default
 spec:
   selector:
     app: nginx-test
   ports:
-    - port: 3000
+    - protocol: TCP
+      port: 3000
       targetPort: 80
+  type: ClusterIP
 ```
 
 
@@ -49,6 +63,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simple-ingress
+  namespace: default
+  annotations:
+    # this annotation removes the need for a trailing slash when calling urls
+    # but it is not necessary for solving this scenario
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -59,7 +78,7 @@ spec:
           backend:
             service:
               name: nginx-server
-              port: 
+              port:
                 number: 3000
 ```
 
@@ -83,6 +102,8 @@ spec:
 ## 随后，我们`kubectl run test-pod --image=curlimages/curl --rm -it -- sh`创建一个测试的pod，`curl http://nginx-server:3000`出了结果,成功
 
 ![alt text](README_Images/5-kind=Ingress/image-13.png)
+
+
 
 
 # 2-考试环境
