@@ -100,10 +100,7 @@ spec:
 ![alt text](README_Images/5-kind=Ingress/image-12.png)
 
 ## 随后，我们`kubectl run test-pod --image=curlimages/curl --rm -it -- sh`创建一个测试的pod，`curl http://nginx-server:3000`出了结果,成功
-
-![alt text](README_Images/5-kind=Ingress/image-13.png)
-
-
+![alt text](README_Images/5-kind=Ingress/image-16.png)
 
 
 # 2-考试环境
