@@ -2,7 +2,7 @@
 ![alt text](README_Images/3-config看集群上下文/image.png)
 ![alt text](README_Images/3-看集群上下文/image.png)
 # kubectl config use-context <context-name>切换集群
-
+## `kubectl config use-context kubernetes-admin@kubernetes`
 ![alt text](README_Images/3-看集群上下文/image-1.png)
 
 ![alt text](README_Images/3-看集群上下文/image-2.png)
