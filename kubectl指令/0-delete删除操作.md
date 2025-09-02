@@ -1,7 +1,8 @@
 # 1-强制删除--force --grace-period=0
 ![alt text](README_Images/0-delete删除操作/image.png)
 
-
+# 2. 怎么创的怎么删
+![alt text](README_Images/0-delete删除操作/image-1.png)
 
 看到你的输出，我来帮你清空所有资源。通常的做法是**按层次结构从外到内删除**，或者使用更高效的方法。
 

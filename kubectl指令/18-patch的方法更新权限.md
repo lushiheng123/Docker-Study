@@ -5,6 +5,9 @@
 
 ![alt text](README_Images/18-patch的方法更新权限/image-1.png)
 
+#
+
+
 # 实验场景
 ## kind=Deployment的yaml清单文件
 ```yaml
