@@ -1,5 +1,11 @@
 # 命令行创建密码secret 
 ![alt text](README_Images/5-kind=Secret/image.png)
+## 从文件创建secret是常见的情况
+
+```sh
+kubectl create secret generic database-app-secret \
+> --from-file=database-data.txt
+```
 ![alt text](README_Images/5-kind=Secret/image-1.png)
 ![alt text](README_Images/5-kind=Secret/image-2.png)
 
