@@ -6,6 +6,7 @@
 ![alt text](README_Images/3-看集群上下文/image-1.png)
 
 ![alt text](README_Images/3-看集群上下文/image-2.png)
-
+# kubectl config current-context - 获取当前kubectl上下文
+![alt text](README_Images/3-config看集群上下文/image-1.png)
 # `kubectl config  view`看当前的配置信息
 ![alt text](README_Images/3-看集群上下文/image-3.png)

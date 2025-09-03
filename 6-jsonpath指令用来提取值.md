@@ -4,3 +4,5 @@
 
 
 # `echo "kubectl get service redis-service -o jsonpath='{.spec.ports[0].targetPort}'" > svc-filter.sh`通过jsonpath就能轻松提取出来
+
+#

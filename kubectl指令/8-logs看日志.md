@@ -9,3 +9,7 @@
 kubectl -n management logs deploy/collect-data -c nginx >> /root/logs.log
 ```
 ## `kubectl logs alpine-reader-pod > podlogs.txt`
+
+
+# `kubectl logs application-pod | grep -i "ERROR" > poderrorlogs.txt` -i忽略大小写
+![alt text](README_Images/8-logs看日志/image.png)
