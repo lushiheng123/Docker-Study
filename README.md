@@ -12,8 +12,8 @@ git remote add origin git@github.com:lushiheng123/Docker-Study.git
 git push -u origin docker_compose_1
 ```
 
-# 先删除前面的容器和镜像
-
+# 先删除前面的容器和镜像（这样能删干净）
+![alt text](README_Images/README/image.png)
 ### 1. 写 docker-compose.yaml 文件
 
 ```yaml
